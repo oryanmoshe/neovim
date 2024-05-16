@@ -22,6 +22,7 @@ return {
             })
 
             vim.keymap.set('n', '<leader>=', require('go.format').goimports, { silent = true, noremap = true })
+            vim.o.expandtab = true
         end,
 
         lazy = true,
