@@ -1,14 +1,17 @@
 return {
     "nvim-treesitter/nvim-treesitter",
-    "nvim-treesitter/nvim-treesitter-context",
-    "nvim-treesitter/nvim-treesitter-textobjects",
+    dependencies = {
+        "nvim-treesitter/nvim-treesitter-context",
+        "nvim-treesitter/nvim-treesitter-textobjects",
+    },
+    lazy = false,
 
     config = function()
         require('nvim-treesitter.configs').setup({
             ensure_installed = {},
             highlight = {
                 enable = true,
-                additional_vim_regex_highlighting = false,
+                additional_vim_regex_highlighting = true,
 
             },
 

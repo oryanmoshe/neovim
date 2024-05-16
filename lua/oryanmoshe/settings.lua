@@ -29,3 +29,6 @@ vim.o.termguicolors = true
 vim.o.cmdheight = 1
 vim.o.inccommand = 'nosplit'
 
+vim.o.scrolloff = 8
+
+vim.o.colorcolumn = 90

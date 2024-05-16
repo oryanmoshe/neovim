@@ -17,6 +17,7 @@ return {
     -- vim.cmd.colorscheme('catppuccin-mocha')
     vim.o.background = 'dark'
     vim.cmd.colorscheme('gruvbox')
+    -- vim.cmd.colorscheme('zephyr')
 
     -- require('catppuccin').setup({
     --   integrations = {
