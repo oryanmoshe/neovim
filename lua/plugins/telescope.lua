@@ -1,8 +1,8 @@
 return {
   {
-    'nvim-telescope/telescope.nvim', tag = '0.1.6',
+    'nvim-telescope/telescope.nvim', tag = '0.1.7',
     -- or                              , branch = '0.1.x',
-    dependencies = { 'nvim-lua/plenary.nvim' },
+    dependencies = { 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope-file-browser.nvim' },
     config = function()
       require("telescope").setup({
         extensions = {
@@ -25,8 +25,8 @@ return {
       -- vim.keymap.set('n', '<localleader>fe', "<cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>", {noremap = true})
     end,
   },
-  {
-    "nvim-telescope/telescope-file-browser.nvim",
-    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
-  },
+  -- {
+  --   "nvim-telescope/telescope-file-browser.nvim",
+  --   dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+  -- },
 }

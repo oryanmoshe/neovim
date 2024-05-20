@@ -8,7 +8,13 @@ return {
 
     config = function()
         require('nvim-treesitter.configs').setup({
-            ensure_installed = {},
+            ensure_installed = {
+                'go', 'gomod', 'gosum', 'markdown', 'markdown_inline',
+                'lua', 'dockerfile', 'json', 'javascript', 'python',
+                'gitcommit', 'gitignore', 'git_config', 'git_rebase',
+                'toml', 'yaml', 'xml', 'typescript', 'sql', 'fish',
+                'bash',
+            },
             highlight = {
                 enable = true,
                 additional_vim_regex_highlighting = true,

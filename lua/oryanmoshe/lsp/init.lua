@@ -14,6 +14,8 @@ end)
 
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
+
+
 cmp.setup({
     sources = {
         { name = "copilot" }, --, group_index = 2 },
@@ -42,6 +44,15 @@ cmp.setup({
         },
     },
 })
+
+-- If you want insert `(` after select function or method item
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+
+cmp.event:on(
+  'confirm_done',
+  cmp_autopairs.on_confirm_done()
+)
+
 -- lsp_zero.setup()
 
 -- here you can setup the language servers
