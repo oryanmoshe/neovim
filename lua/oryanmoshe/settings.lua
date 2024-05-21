@@ -41,3 +41,5 @@ vim.o.signcolumn = "yes"
 
 vim.o.wrap = false
 vim.o.updatetime = 50
+
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
