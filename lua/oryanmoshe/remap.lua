@@ -25,3 +25,5 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 vim.keymap.set('n', '<leader>=', vim.lsp.buf.format)
 
 vim.keymap.set('n', '<localleader>mm', ':MinimapToggle<CR>', { noremap = true, silent = true })
+
+vim.keymap.set("n", "<CR>", [[{-> v:hlsearch ? ":nohl<CR>" : "<CR>"}()]], { silent = true, expr = true })

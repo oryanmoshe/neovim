@@ -34,7 +34,7 @@ vim.o.scrolloff = 15
 
 vim.o.colorcolumn = "90"
 
-vim.o.hlsearch = false
+vim.o.hlsearch = true
 vim.o.incsearch = true
 
 vim.o.signcolumn = "yes"
