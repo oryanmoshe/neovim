@@ -21,12 +21,12 @@ local function format()
     if tickdiff > 0 then
         if client.name == 'lua_ls' and (currtick - vim.b[bufnr].changetick) <= 2 then
             -- vim.api.nvim_feedkeys('u', 'n', false)
-            vim.notify('No changes to format - ' .. formatter .. 'tickdiff: ' .. tickdiff)
+            vim.notify('No changes to format - ' .. formatter .. ' | tickdiff: ' .. tickdiff)
         else
-            vim.notify('Formatted using ' .. formatter .. 'tickdiff: ' .. tickdiff)
+            vim.notify('Formatted using ' .. formatter .. ' | tickdiff: ' .. tickdiff)
         end
     else
-        vim.notify('No changes to format' .. 'tickdiff: ' .. tickdiff)
+        vim.notify('No changes to format | tickdiff: ' .. tickdiff)
     end
 
     vim.b[bufnr].changetick = currtick
