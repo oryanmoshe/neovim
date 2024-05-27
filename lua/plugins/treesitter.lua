@@ -13,7 +13,7 @@ return {
                 'lua', 'dockerfile', 'json', 'javascript', 'python',
                 'gitcommit', 'gitignore', 'git_config', 'git_rebase',
                 'toml', 'yaml', 'xml', 'typescript', 'sql', 'fish',
-                'bash',
+                'bash', 'terraform',
             },
             highlight = {
                 enable = true,
