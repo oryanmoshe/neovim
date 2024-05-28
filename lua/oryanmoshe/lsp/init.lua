@@ -4,9 +4,16 @@ require('mason-lspconfig').setup({
 })
 
 
-require('lspconfig').pylsp.setup({})
-require('lspconfig').yamlls.setup({})
-require('lspconfig').dockerls.setup({})
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+require('lspconfig').pylsp.setup({
+    capabilities = capabilities,
+})
+require('lspconfig').yamlls.setup({
+    capabilities = capabilities,
+})
+require('lspconfig').dockerls.setup({
+    capabilities = capabilities,
+})
 
 require('oryanmoshe.lsp.cmp')
 require('oryanmoshe.lsp.lua_ls')
