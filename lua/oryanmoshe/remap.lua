@@ -27,4 +27,10 @@ vim.keymap.set('n', '<localleader>mm', '<cmd>MinimapToggle<CR>', { noremap = tru
 
 vim.keymap.set("n", "<CR>", [[{-> v:hlsearch ? ":nohl<CR>" : "<CR>"}()]], { silent = true, expr = true })
 
-vim.keymap.set('n', '<localleader><leader>', vim.lsp.buf.code_action, { noremap = true, silent = true })
+vim.keymap.set({'n', 'v'}, '<localleader><leader>', vim.lsp.buf.code_action, { noremap = true, silent = true })
+
+vim.keymap.set("n", '<leader>j', function() vim.cmd("wincmd j") end, { noremap = true, silent = true })
+vim.keymap.set("n", '<leader>k', function() vim.cmd("wincmd k") end, { noremap = true, silent = true })
+
+vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y', { silent = true })
+vim.keymap.set({ 'n', 'v' }, '<leader>p', '"+p', { silent = true })
